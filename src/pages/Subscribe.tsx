@@ -5,6 +5,8 @@ import { Logo } from "../components/Logo";
 import { ReactLogo } from "../components/ReactLogo";
 import { useCreateSubscriberMutation } from "../graphql/generated";
 
+import imgCodeMockup from "../assets/code-mockup.png";
+
 export function Subscribe() {
   const navigate = useNavigate();
 
@@ -27,11 +29,11 @@ export function Subscribe() {
   }
 
   return (
-    <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center">
+    <div className="px-5 min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center">
       <div className="absolute top-2">
         <ReactLogo />
       </div>
-      <div className="w-full max-w-[1100px] flex items-center justify-between mt-20 mx-auto">
+      <div className="w-full max-w-[1100px] flex items-center justify-between mt-20 mx-auto z-10">
         <div className="max-w-[624px]">
           <Logo />
           <h1 className="mt-8 text-[2.5rem] leading-tight">
@@ -78,7 +80,7 @@ export function Subscribe() {
         </div>
       </div>
 
-      <img src="/src/assets/code-mockup.png" alt="code mockup" />
+      <img src={imgCodeMockup} alt="code mockup" />
     </div>
   );
 }
